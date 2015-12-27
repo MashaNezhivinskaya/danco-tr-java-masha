@@ -1,0 +1,12 @@
+students:{
+1;Ivanov;Vova;spec
+}
+lectures:{
+10;leccia1;2015-12-28
+}
+lecturers:{
+1;ffgf;lector;dfdgdg;dfdgdg
+}
+course:{
+3;Course;fgfgfg;20;2;1;2015-12-28;2015-12-28; 1; 10
+}
