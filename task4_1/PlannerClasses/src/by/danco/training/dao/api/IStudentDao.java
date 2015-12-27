@@ -9,5 +9,7 @@ public interface IStudentDao {
 	public void updateRecord(Student student);
 	public Student getRecordById(Long id);
 	public Student[] getAll();
+	
+	public Integer getCount();
 
 }

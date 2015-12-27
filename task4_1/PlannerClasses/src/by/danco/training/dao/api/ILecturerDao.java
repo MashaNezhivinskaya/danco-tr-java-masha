@@ -9,5 +9,10 @@ public interface ILecturerDao {
 	public void updateRecord(Lecturer lecturer);
 	public Lecturer getRecordById(Long id);
 	public Lecturer[] getAll();
+	
+	public Lecturer[] sortName();
+	public Lecturer[] sortCountCourse();
+	public Integer getCount();
+	
 
 }

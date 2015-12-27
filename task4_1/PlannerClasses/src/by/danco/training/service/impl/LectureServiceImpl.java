@@ -1,5 +1,7 @@
 package by.danco.training.service.impl;
 
+import java.util.Date;
+
 import by.danco.training.dao.api.ILectureDao;
 import by.danco.training.modal.Lecture;
 import by.danco.training.service.api.ILectureService;
@@ -38,6 +40,21 @@ private ILectureDao lectureDao;
 	@Override
 	public Lecture[] getAll() {
 		return lectureDao.getAll();
+	}
+
+	@Override
+	public Lecture[] sortDate() {
+		return lectureDao.sortDate();
+	}
+
+	@Override
+	public Lecture[] sortName() {
+		return lectureDao.sortName() ;
+	}
+
+	@Override
+	public Lecture[] getLectureDate(Date data) {
+		return lectureDao.getLectureDate(data);
 	}
 
 }

@@ -1,6 +1,13 @@
 package by.danco.training.dao.impl;
 
+import java.util.Arrays;
+import java.util.Date;
+
+import by.danco.trainig.comparator.CourseNameComparator;
+import by.danco.trainig.comparator.DateLectureComparator;
+import by.danco.trainig.comparator.NameLectureComparator;
 import by.danco.training.dao.api.ILectureDao;
+import by.danco.training.modal.Course;
 import by.danco.training.modal.Lecture;
 
 public class LectureDaoImpl implements ILectureDao {
@@ -61,6 +68,31 @@ public class LectureDaoImpl implements ILectureDao {
 	@Override
 	public Lecture[] getAll() {
 		return lectures;
+	}
+
+	@Override
+	public Lecture[] sortDate() {
+		 Arrays.sort(lectures, new DateLectureComparator());
+		return lectures;
+	}
+
+	@Override
+	public Lecture[] sortName() {
+		 Arrays.sort(lectures, new NameLectureComparator());
+		return lectures;
+	}
+
+	@Override
+	public Lecture[] getLectureDate(Date data) {
+		Lecture[] lecture = new Lecture[lectures.length];
+		int y=0;
+		for(int i=0;i<lectures.length;i++){
+			if(data.equals(lectures[i].getDate())){
+				lecture[y]=lecture[i];
+				y++;
+			}
+		}
+		return lecture;
 	}
 
 }

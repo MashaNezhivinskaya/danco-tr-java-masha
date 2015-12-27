@@ -6,6 +6,11 @@ import by.danco.training.modal.Student;
 public class StudentDaoImpl implements IStudentDao {
 	
 	private Student[] students;
+	
+	
+	public StudentDaoImpl(Student[] students) {
+		this.students = students;
+	}
 
 	@Override
 	public void addRecord(Student student) {
@@ -56,6 +61,11 @@ public class StudentDaoImpl implements IStudentDao {
 	@Override
 	public Student[] getAll() {
 		return students;
+	}
+
+	@Override
+	public Integer getCount() {
+		return students.length;
 	}
 
 }

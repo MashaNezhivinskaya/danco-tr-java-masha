@@ -40,4 +40,9 @@ private IStudentDao studentDao;
 		return studentDao.getAll();
 	}
 
+	@Override
+	public Integer getCount() {
+		return studentDao.getCount();
+	}
+
 }

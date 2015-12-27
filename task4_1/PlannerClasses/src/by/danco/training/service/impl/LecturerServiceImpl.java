@@ -1,6 +1,9 @@
 package by.danco.training.service.impl;
 
+import java.util.Date;
+
 import by.danco.training.dao.api.ILecturerDao;
+import by.danco.training.modal.Lecture;
 import by.danco.training.modal.Lecturer;
 import by.danco.training.service.api.ILecturerService;
 
@@ -39,5 +42,21 @@ private ILecturerDao lecturerDao;
 	public Lecturer[] getAll() {
 		return lecturerDao.getAll();
 	}
+
+	@Override
+	public Lecturer[] sortName() {
+		return lecturerDao.sortName();
+	}
+
+	@Override
+	public Lecturer[] sortCountCourse() {
+		return lecturerDao.sortCountCourse();
+	}
+
+	@Override
+	public Integer getCount() {
+		return lecturerDao.getCount();
+	}
+
 
 }
