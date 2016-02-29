@@ -1,0 +1,1 @@
+maxStudent=7
